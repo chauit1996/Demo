@@ -16,8 +16,7 @@ public class WebDriverCore {
     public static Properties properties;
     public static String baseURL;
     public static WebDriverWait explicitWait;
-
-
+    public static JavascriptExecutor jsExecutor;
 
     public static WebDriver newDriver(String browserName) {
         switch (browserName) {
@@ -52,8 +51,9 @@ public class WebDriverCore {
         baseURL = properties.getProperty("url");
         driver = newDriver(browserName);
         driver.manage().window().maximize();
-        driver.manage().timeouts(). implicitlyWait(5, TimeUnit.SECONDS);
-        explicitWait = new WebDriverWait(driver,5);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        explicitWait = new WebDriverWait(driver, 5);
+        jsExecutor = (JavascriptExecutor) driver;
         driver.get(baseURL);
     }
 

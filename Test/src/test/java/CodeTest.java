@@ -1,7 +1,6 @@
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
@@ -30,6 +29,7 @@ public class CodeTest extends MainTest {
             System.out.println(listPage.getText().trim().toLowerCase());
             Assert.assertTrue(listPage.getText().trim().toLowerCase().contains(text.toLowerCase()));
         }
+        jsExecutor.executeScript("window.scrollBy(800,1000)");
 
         // Verify text of Video Result
         List<WebElement> listVideoResult = driver.findElements(videoResult);
