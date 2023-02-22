@@ -11,7 +11,7 @@ public class CodeTest extends MainTest {
     By inputTextBox = By.xpath("//input[@title='Tìm kiếm']");
     By buttonSearch = By.xpath("//div[@class='FPdoLc lJ9FBc']//input[@value='Tìm trên Google']");
     By pageResult = By.xpath("//h1[text()='Kết quả tìm kiếm']/parent::div//h3[@class='LC20lb MBeuO DKV0Md']");
-    By videoResult = By.xpath("//div[@class='uVMCKf aNytqb']//div//span[@class='cHaqb']");
+    By videoResult = By.xpath("//div[@class='WZIVy']//div//span[@class='cHaqb']");
     String inputData = "Demo with selenium";
     String text = "Selenium";
 
